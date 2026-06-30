@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Arts &amp; Images — Jean-Pierre Dullier · Photographe de sport en Guadeloupe</title>
+<meta name="description" content="Photographe de sport en Guadeloupe : reportages de compétition, portraits d'athlètes, image au service des clubs et des organisateurs. L'instant décisif, figé." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#0b0c0e; --ink2:#15171b; --paper:#f6f5f2; --mut:#9aa0a8;
+    --line:rgba(255,255,255,.12); --acc:#ff5630; --acc2:#ffd23f;
+    --maxw:1240px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter",system-ui,sans-serif;color:#e9eaec;background:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 30px}
+  .display{font-family:"Anton",Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.005em;line-height:.92}
+  .eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:.72rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--acc)}
+  .eyebrow::before{content:"";width:30px;height:2px;background:var(--acc)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:16px 30px;border-radius:50px;transition:.25s;cursor:pointer;border:2px solid transparent}
+  .btn-acc{background:var(--acc);color:#fff}
+  .btn-acc:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px var(--acc)}
+  .btn-ghost{border-color:rgba(255,255,255,.4);color:#fff}
+  .btn-ghost:hover{background:#fff;color:var(--ink);border-color:#fff}
+
+  /* HEADER */
+  header{position:fixed;inset:0 0 auto;z-index:60;transition:.35s}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding-block:22px}
+  .brand{display:flex;flex-direction:column;line-height:1}
+  .brand .b1{font-family:"Anton",sans-serif;font-size:1.45rem;text-transform:uppercase;letter-spacing:.02em;color:#fff}
+  .brand .b2{font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:var(--acc);margin-top:4px}
+  .menu{display:flex;gap:30px;align-items:center}
+  .menu a{font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#dfe1e4;opacity:.85;transition:.2s}
+  .menu a:hover{opacity:1;color:var(--acc)}
+  .menu a.cta{padding:11px 22px;border:2px solid var(--acc);border-radius:50px;color:#fff;opacity:1}
+  .menu a.cta:hover{background:var(--acc)}
+  header.scrolled{background:rgba(11,12,14,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;z-index:70}
+  .burger span{width:28px;height:2px;background:#fff;transition:.3s}
+
+  /* HERO */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background:#000 center/cover no-repeat;
+    background-image:url('https://images.unsplash.com/photo-1526676537331-7747bf8278fc?auto=format&fit=crop&w=2000&h=1300&q=80');
+    transform:scale(1.05);will-change:transform}
+  .hero::after{content:"";position:absolute;inset:0;background:
+    linear-gradient(180deg,rgba(11,12,14,.55) 0%,rgba(11,12,14,.05) 30%,rgba(11,12,14,.55) 70%,rgba(11,12,14,.96) 100%)}
+  .hero-inner{position:relative;z-index:2;width:100%;padding:140px 0 70px}
+  .hero>.wrap{width:100%}
+  .hero h1{font-size:clamp(3.4rem,11vw,9rem);margin:.2em 0 .28em;color:#fff;text-shadow:0 2px 26px rgba(0,0,0,.55)}
+  .hero h1 em{font-style:normal;color:var(--acc);text-shadow:0 2px 26px rgba(0,0,0,.6)}
+  .hero .eyebrow{text-shadow:0 1px 12px rgba(0,0,0,.5)}
+  .hero .lead{font-size:1.18rem;max-width:540px;color:#e7e8ea;margin-bottom:2em;font-weight:400}
+  .hero .row{display:flex;gap:14px;flex-wrap:wrap}
+  .scrollcue{position:absolute;right:30px;bottom:36px;z-index:2;writing-mode:vertical-rl;font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:#fff;opacity:.7}
+  .vside{position:absolute;left:30px;top:50%;transform:translateY(-50%) rotate(180deg);writing-mode:vertical-rl;z-index:2;font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:#fff;opacity:.55}
+
+  /* MARQUEE */
+  .marquee{background:var(--acc);color:#fff;padding:18px 0;overflow:hidden;white-space:nowrap;border-top:1px solid rgba(0,0,0,.1)}
+  .marquee .track{display:inline-block;animation:scroll 26s linear infinite}
+  .marquee span{font-family:"Anton",sans-serif;text-transform:uppercase;font-size:1.4rem;letter-spacing:.04em;padding:0 26px}
+  .marquee span::after{content:"✦";color:rgba(255,255,255,.55);margin-left:52px;font-family:Inter}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  section{padding:120px 0;position:relative}
+  .lead-head{max-width:760px;margin-bottom:60px}
+  .lead-head h2{font-size:clamp(2.2rem,5vw,3.6rem);color:#fff;margin:.3em 0;line-height:1.02}
+  .lead-head p{color:var(--mut);font-size:1.05rem}
+
+  /* STATS */
+  .stats{background:var(--ink2)}
+  .statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+  .stat{padding:30px 24px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(160deg,rgba(255,255,255,.04),transparent)}
+  .stat .n{font-family:"Anton",sans-serif;font-size:2.6rem;color:var(--acc);line-height:1}
+  .stat .l{margin-top:10px;font-size:.86rem;color:#cfd2d6;font-weight:500}
+  .stat .s{font-size:.78rem;color:var(--mut);margin-top:4px}
+
+  /* APPROACH */
+  .split{display:grid;grid-template-columns:1fr 1.05fr;gap:64px;align-items:center}
+  .split .imgwrap{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 30px 60px -30px #000}
+  .split .imgwrap img{width:100%;height:100%;object-fit:cover}
+  .split .tag{position:absolute;left:18px;bottom:18px;background:var(--acc);color:#fff;font-weight:700;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;padding:9px 16px;border-radius:50px}
+  .split h2{font-size:clamp(2rem,4vw,3rem);color:#fff;margin-bottom:.5em;line-height:1.04}
+  .split p{color:#bfc4ca;margin-bottom:1.1em}
+  .sign{font-family:"Anton",sans-serif;font-size:1.2rem;color:#fff;letter-spacing:.03em;text-transform:uppercase;margin-top:6px}
+  .sign small{display:block;font-family:Inter;font-weight:500;font-size:.74rem;letter-spacing:.1em;color:var(--acc);margin-top:6px}
+
+  /* GALLERY */
+  .gal{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:178px;gap:14px}
+  .gal figure{position:relative;overflow:hidden;border-radius:14px;margin:0}
+  .gal img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+  .gal figure::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,12,14,.5),transparent 55%);opacity:0;transition:.4s}
+  .gal figure:hover img{transform:scale(1.07)}
+  .gal figure:hover::after{opacity:1}
+  .g1{grid-column:span 6;grid-row:span 2}
+  .g2{grid-column:span 3;grid-row:span 2}
+  .g3{grid-column:span 3;grid-row:span 2}
+  .g4{grid-column:span 4;grid-row:span 2}
+  .g5{grid-column:span 4;grid-row:span 2}
+  .g6{grid-column:span 4;grid-row:span 2}
+  .g7{grid-column:span 7;grid-row:span 2}
+  .g8{grid-column:span 5;grid-row:span 2}
+  .note{text-align:center;margin-top:22px;font-size:.82rem;color:var(--mut);font-style:italic}
+
+  /* SERVICES */
+  .svc{background:var(--ink2)}
+  .svcgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .svccard{padding:38px 30px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(160deg,rgba(255,255,255,.04),transparent);transition:.3s}
+  .svccard:hover{transform:translateY(-6px);border-color:var(--acc)}
+  .svccard .ic{font-family:"Anton",sans-serif;font-size:1.5rem;color:var(--acc);width:54px;height:54px;display:grid;place-items:center;border:2px solid var(--acc);border-radius:14px;margin-bottom:20px}
+  .svccard h3{font-size:1.3rem;color:#fff;margin-bottom:.5em}
+  .svccard p{color:var(--mut);font-size:.93rem}
+
+  /* QUOTES */
+  .qgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+  .q{padding:36px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(160deg,rgba(255,255,255,.04),transparent)}
+  .q .st{color:var(--acc2);letter-spacing:.2em;margin-bottom:14px}
+  .q p{font-size:1.14rem;color:#eceef0;font-weight:500;margin-bottom:16px;line-height:1.5}
+  .q .who{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+
+  /* CONTACT */
+  .contact{background:linear-gradient(180deg,var(--ink2),var(--ink));text-align:center}
+  .contact h2{font-size:clamp(2.4rem,6vw,4.4rem);color:#fff}
+  .contact h2 em{font-style:normal;color:var(--acc)}
+  .contact .sub{color:var(--mut);max-width:520px;margin:18px auto 40px}
+  form{max-width:560px;margin:0 auto;display:grid;gap:14px;text-align:left}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  input,textarea,select{width:100%;padding:16px;border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:12px;color:#fff;font:inherit}
+  input::placeholder,textarea::placeholder{color:#7b818a}
+  input:focus,textarea:focus,select:focus{outline:none;border-color:var(--acc);background:rgba(255,255,255,.07)}
+  form button{justify-self:center;margin-top:6px;border:0}
+  .trust{margin-top:22px;font-size:.8rem;color:var(--mut)}
+  .trust b{color:#cfd2d6}
+
+  footer{background:#070708;padding:60px 0 40px;font-size:.88rem;color:#8b9099}
+  .fgrid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;margin-bottom:34px}
+  .fgrid a:hover{color:var(--acc)}
+  .fcol h4{color:#fff;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
+  .fcol p{margin:5px 0}
+  .seo{font-size:.74rem;color:#5f656e;border-top:1px solid var(--line);padding-top:22px;line-height:1.7}
+
+  .demo{position:fixed;right:18px;bottom:18px;z-index:90;max-width:330px;background:rgba(11,12,14,.96);color:#eef0f2;border:1px solid var(--acc);border-radius:14px;padding:16px 42px 16px 18px;font-size:.82rem;line-height:1.5;box-shadow:0 20px 50px -20px #000}
+  .demo b{color:var(--acc)}
+  .demo a{color:#fff;text-decoration:underline;text-underline-offset:2px}
+  .demo .x{position:absolute;top:10px;right:13px;cursor:pointer;font-size:1.15rem;opacity:.6}
+  .demo .x:hover{opacity:1}
+
+  .reveal{opacity:0;transform:translateY(30px);transition:.9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:900px){
+    .menu{position:fixed;inset:0 0 0 32%;background:var(--ink2);flex-direction:column;justify-content:center;gap:28px;transform:translateX(100%);transition:.4s}
+    .menu.open{transform:none}
+    .burger{display:flex}
+    .split{grid-template-columns:1fr;gap:36px}
+    .statgrid{grid-template-columns:repeat(2,1fr)}
+    .svcgrid,.qgrid{grid-template-columns:1fr}
+    .gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px}
+    .g1,.g2,.g3,.g4,.g5,.g6,.g7,.g8{grid-column:span 1;grid-row:span 1}
+    .g1,.g7{grid-column:span 2}
+    .vside{display:none}
+  }
+  @media(max-width:560px){
+    section{padding:80px 0}
+    .frow{grid-template-columns:1fr}
+    .gal{grid-template-columns:1fr;grid-auto-rows:auto}
+    .gal figure{aspect-ratio:4/3}
+    .g1,.g7{grid-column:span 1}
+    .hero-inner{padding-bottom:210px}
+    .demo{left:12px;right:12px;max-width:none}
+    .scrollcue{display:none}
+  }
+</style>
+</head>
+<body id="top">
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="b1">Arts &amp; Images</span><span class="b2">Photographe de sport · Guadeloupe</span></a>
+    <nav class="menu" id="menu">
+      <a href="#approche">L'approche</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#prestations">Prestations</a>
+      <a href="#avis">Avis</a>
+      <a href="#contact" class="cta">Réserver une couverture</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <span class="vside">Arts &amp; Images — Outre-Mer</span>
+  <div class="wrap"><div class="hero-inner">
+    <span class="eyebrow">L'image au service du sport</span>
+    <h1 class="display">L'instant<br><em>décisif.</em></h1>
+    <p class="lead">Photographe de sport en Guadeloupe. Je fige l'effort, la vitesse et l'émotion — pour les clubs, les athlètes et les organisateurs qui veulent des images à la hauteur de la performance.</p>
+    <div class="row">
+      <a href="#contact" class="btn btn-acc">Réserver une couverture →</a>
+      <a href="#portfolio" class="btn btn-ghost">Voir le portfolio</a>
+    </div>
+  </div></div>
+  <div class="scrollcue">défilez</div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Athlétisme</span><span>Football</span><span>Basket</span><span>Gymnastique</span><span>Cyclisme</span><span>Arts martiaux</span><span>Natation</span><span>Handball</span><span>Athlétisme</span><span>Football</span><span>Basket</span><span>Gymnastique</span><span>Cyclisme</span><span>Arts martiaux</span><span>Natation</span><span>Handball</span>
+  </div>
+</div>
+
+<section class="stats">
+  <div class="wrap">
+    <div class="statgrid">
+      <div class="stat reveal"><div class="n">1/1000<span style="font-size:1.3rem">s</span></div><div class="l">L'instant figé</div><div class="s">Vitesse, saut, contact</div></div>
+      <div class="stat reveal"><div class="n">971</div><div class="l">Guadeloupe &amp; Antilles</div><div class="s">Déplacements sur tout le territoire</div></div>
+      <div class="stat reveal"><div class="n">48 h</div><div class="l">Galerie livrée</div><div class="s">Sélection web + fichiers HD</div></div>
+      <div class="stat reveal"><div class="n">HD</div><div class="l">Fichiers &amp; tirages</div><div class="s">Presse, clubs, sponsors</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="approche">
+  <div class="wrap split">
+    <div class="imgwrap reveal">
+      <img src="https://images.unsplash.com/photo-1567531708788-4c44105d00ff?auto=format&fit=crop&w=900&h=1125&q=78" alt="Photographe de sport en action" loading="lazy" />
+      <span class="tag">Sur le terrain</span>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">L'approche</span>
+      <h2>Le sport ne se rejoue&nbsp;pas.<br>Il se capte.</h2>
+      <p>Un match, une course, une compétition : tout se joue en une fraction de seconde. Mon métier, c'est d'être au bon endroit avant que l'action n'arrive — pour rapporter l'image que personne d'autre n'a eue.</p>
+      <p>Je travaille au plus près des athlètes et des organisateurs, dans le respect du jeu et de la sécurité. Reportage de compétition, portraits, visuels pour vos réseaux et vos partenaires : l'image devient un vrai outil pour faire rayonner votre discipline.</p>
+      <p class="sign">Jean-Pierre Dullier<small>Arts &amp; Images — Guadeloupe</small></p>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="wrap">
+    <div class="lead-head reveal">
+      <span class="eyebrow">Portfolio</span>
+      <h2>Quand l'effort devient image.</h2>
+      <p>Un aperçu de l'énergie que je cherche à chaque sortie — terrain, parquet, piste, tatami.</p>
+    </div>
+    <div class="gal reveal">
+      <figure class="g1"><img src="https://images.unsplash.com/photo-1549210194-fb0aac030c32?auto=format&fit=crop&w=1100&h=750&q=78" alt="Action basket" loading="lazy"></figure>
+      <figure class="g2"><img src="https://images.unsplash.com/photo-1580692475446-c2fabbbbf835?auto=format&fit=crop&w=700&h=950&q=78" alt="Joueur de basket" loading="lazy"></figure>
+      <figure class="g3"><img src="https://images.unsplash.com/photo-1612768875331-0447b960fa40?auto=format&fit=crop&w=700&h=950&q=78" alt="Dunk basket" loading="lazy"></figure>
+      <figure class="g4"><img src="https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?auto=format&fit=crop&w=800&h=560&q=78" alt="Frappe football" loading="lazy"></figure>
+      <figure class="g5"><img src="https://images.unsplash.com/photo-1626248801379-51a0748a5f96?auto=format&fit=crop&w=800&h=560&q=78" alt="Course sur le terrain" loading="lazy"></figure>
+      <figure class="g6"><img src="https://images.unsplash.com/photo-1505619730259-b1288d154955?auto=format&fit=crop&w=800&h=560&q=78" alt="Gymnaste en suspension" loading="lazy"></figure>
+      <figure class="g7"><img src="https://images.unsplash.com/photo-1502904550040-7534597429ae?auto=format&fit=crop&w=1100&h=750&q=78" alt="Coureurs au stade" loading="lazy"></figure>
+      <figure class="g8"><img src="https://images.unsplash.com/photo-1747336406096-e0df6a228ce9?auto=format&fit=crop&w=900&h=620&q=78" alt="Gymnaste sur la poutre" loading="lazy"></figure>
+    </div>
+    <p class="note">Photos d'illustration — sur votre site, vos propres reportages prendront cette place.</p>
+  </div>
+</section>
+
+<section class="svc" id="prestations">
+  <div class="wrap">
+    <div class="lead-head reveal">
+      <span class="eyebrow">Prestations</span>
+      <h2>Trois façons de travailler ensemble.</h2>
+    </div>
+    <div class="svcgrid">
+      <div class="svccard reveal"><div class="ic">01</div><h3>Reportage de compétition</h3><p>Couverture complète de votre événement : moments forts, ambiance, podiums. Une galerie livrée rapidement pour la presse et vos réseaux.</p></div>
+      <div class="svccard reveal"><div class="ic">02</div><h3>Portraits d'athlètes</h3><p>Des portraits qui donnent de la stature à vos sportifs — affiches, présentations d'équipe, dossiers sponsors.</p></div>
+      <div class="svccard reveal"><div class="ic">03</div><h3>Image club &amp; sponsors</h3><p>Des visuels pensés pour valoriser vos partenaires et nourrir votre communication toute la saison.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="avis">
+  <div class="wrap">
+    <div class="lead-head reveal">
+      <span class="eyebrow">Ils en parlent</span>
+      <h2>La confiance des clubs et organisateurs.</h2>
+      <p style="color:#6f757d;font-size:.82rem;margin-top:8px"><em>(avis d'illustration — à remplacer par vos vrais témoignages)</em></p>
+    </div>
+    <div class="qgrid">
+      <div class="q reveal"><div class="st">★★★★★</div><p>« Des photos qui claquent. On les a utilisées pour la presse et nos sponsors, l'impact a été immédiat. »</p><div class="who">Comité sportif — Guadeloupe</div></div>
+      <div class="q reveal"><div class="st">★★★★★</div><p>« Réactif, discret, toujours au bon endroit. La galerie était en ligne le lendemain de la compétition. »</p><div class="who">Président de club — Basse-Terre</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" style="justify-content:center">Réservations &amp; devis</span>
+      <h2>Une compétition à <em>couvrir&nbsp;?</em></h2>
+      <p class="sub">Dites-moi la date, la discipline et le lieu — je vous réponds sous 48 h avec une proposition claire.</p>
+    </div>
+    <form class="reveal" id="cform">
+      <div class="frow">
+        <input type="text" placeholder="Votre nom / club" required>
+        <input type="text" placeholder="Discipline (basket, athlé…)">
+      </div>
+      <div class="frow">
+        <input type="email" placeholder="Votre e-mail" required>
+        <input type="text" placeholder="Date (jj/mm/aaaa)">
+      </div>
+      <textarea rows="4" placeholder="Votre événement (lieu, date, besoins)…"></textarea>
+      <button class="btn btn-acc" type="submit">Demander un devis →</button>
+    </form>
+    <p class="trust">🔒 <b>Connexion sécurisée (HTTPS)</b> &nbsp;·&nbsp; Réponse sous 48 h &nbsp;·&nbsp; Sans engagement</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fcol" style="max-width:280px">
+        <div class="brand"><span class="b1">Arts &amp; Images</span><span class="b2" style="letter-spacing:.16em">Jean-Pierre Dullier · Guadeloupe</span></div>
+        <p style="margin-top:14px;color:#6f757d">L'image au service du sport, dans toute la Guadeloupe et les Antilles.</p>
+      </div>
+      <div class="fcol"><h4>Navigation</h4><p><a href="#approche">L'approche</a></p><p><a href="#portfolio">Portfolio</a></p><p><a href="#prestations">Prestations</a></p><p><a href="#contact">Contact</a></p></div>
+      <div class="fcol"><h4>Contact</h4><p><a href="mailto:artsimages97@gmail.com">artsimages97@gmail.com</a></p><p>Guadeloupe — Outre-Mer</p><p><a href="#contact">Demander un devis</a></p></div>
+    </div>
+    <p class="seo">Photographe sport Guadeloupe · Reportage de compétition Antilles · Portraits d'athlètes · Photographe événement sportif Basse-Terre &amp; Grande-Terre · Image club et sponsors.</p>
+  </div>
+</footer>
+
+<div class="demo" id="demo">
+  <span class="x" onclick="document.getElementById('demo').remove()">×</span>
+  <b>✦ Maquette</b> réalisée par <b>Nicolas Masset</b> à partir de votre univers. C'est un aperçu rapide — la version finale est <b>100 % sur-mesure</b> (vos photos, vos couleurs). <a href="mailto:nicolas.masset@icloud.com">Me contacter ›</a>
+</div>
+
+<script>
+  var hdr=document.getElementById('hdr');
+  addEventListener('scroll',function(){hdr.classList.toggle('scrolled',scrollY>50);
+    var b=document.getElementById('heroBg'); if(b&&scrollY<900) b.style.transform='scale(1.05) translateY('+(scrollY*0.18)+'px)';});
+  var menu=document.getElementById('menu'),burger=document.getElementById('burger');
+  burger.onclick=function(){menu.classList.toggle('open')};
+  menu.querySelectorAll('a').forEach(function(a){a.onclick=function(){menu.classList.remove('open')}});
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting)x.target.classList.add('in')})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  addEventListener('load',function(){setTimeout(function(){document.querySelectorAll('.reveal:not(.in)').forEach(function(el){el.classList.add('in')})},1400)});
+  document.getElementById('cform').addEventListener('submit',function(e){e.preventDefault();this.innerHTML='<p style="text-align:center;font-size:1.3rem;color:#fff;padding:30px 0">Merci ! Votre demande a bien été envoyée — réponse sous 48 h. ✦</p>'});
+</script>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</body>
+</html>
