@@ -50,7 +50,9 @@
     nav.menu a:not(.navcta):hover::after,nav.menu a:not(.navcta):focus-visible::after{transform:scaleX(1);transform-origin:left}
     nav.menu a.navcta{border:1px solid rgba(255,255,255,.55);padding:11px 22px;border-radius:2px;transition:background .3s,color .3s,border-color .3s}
     nav.menu a.navcta:hover{background:#fff;color:var(--ink);border-color:#fff}
-    header.scrolled{background:rgba(250,248,243,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+    header.scrolled{background:rgba(250,248,243,.94);box-shadow:0 1px 0 var(--line)}
+    /* blur sur un pseudo-élément : backdrop-filter sur header en ferait le containing block du menu mobile (position:fixed) */
+    header.scrolled::before{content:"";position:absolute;inset:0;z-index:-1;backdrop-filter:blur(10px)}
     header.scrolled .bar{padding:18px 0}
     header.scrolled .brand{color:var(--ink)}
     header.scrolled nav.menu a{color:var(--ink)}

@@ -47,7 +47,9 @@
   .menu a:hover{opacity:1;color:#fff}
   .menu a.cta{padding:11px 22px;border:2px solid var(--acc);border-radius:50px;color:#fff;opacity:1}
   .menu a.cta:hover{background:var(--acc);color:var(--acc-ink)}
-  header.scrolled{background:rgba(11,12,14,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+  header.scrolled{background:rgba(11,12,14,.92);box-shadow:0 1px 0 var(--line)}
+  /* blur sur un pseudo-élément : backdrop-filter sur header en ferait le containing block du menu mobile (position:fixed) */
+  header.scrolled::before{content:"";position:absolute;inset:0;z-index:-1;backdrop-filter:blur(10px)}
   .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;z-index:70}
   .burger span{width:28px;height:2px;background:#fff;transition:.3s}
 

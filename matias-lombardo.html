@@ -53,7 +53,9 @@
   .menu a:hover{color:#fff;opacity:1}
   .menu a.cta{padding:11px 20px;border:1px solid rgba(255,255,255,.5);border-radius:4px;opacity:1}
   .menu a.cta:hover{background:#fff;color:var(--ink)}
-  header.scrolled{background:rgba(14,25,34,.93);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(255,255,255,.08)}
+  header.scrolled{background:rgba(14,25,34,.93);box-shadow:0 1px 0 rgba(255,255,255,.08)}
+  /* blur sur un pseudo-élément : backdrop-filter sur header en ferait le containing block du menu mobile (position:fixed) */
+  header.scrolled::before{content:"";position:absolute;inset:0;z-index:-1;backdrop-filter:blur(10px)}
   .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;z-index:70;padding:6px}
   .burger span{width:28px;height:2px;background:#fff;transition:.3s var(--ease)}
   .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
