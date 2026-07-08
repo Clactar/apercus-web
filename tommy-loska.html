@@ -72,7 +72,9 @@
   .imgnote{position:absolute;right:12px;top:11px;z-index:3;font-size:.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:rgba(19,42,27,.72);padding:5px 11px;border-radius:50px;backdrop-filter:blur(3px)}
 
   /* HEADER */
-  header{position:fixed;inset:0 0 auto;z-index:60;background:rgba(253,250,242,.88);backdrop-filter:blur(9px);transition:background .35s,box-shadow .35s}
+  header{position:fixed;inset:0 0 auto;z-index:60;background:rgba(253,250,242,.88);transition:background .35s,box-shadow .35s}
+  /* blur sur un pseudo-element : backdrop-filter sur header en ferait le containing block du .menu mobile (position:fixed) */
+  header::before{content:"";position:absolute;inset:0;z-index:-1;backdrop-filter:blur(9px)}
   header.scrolled{background:rgba(253,250,242,.96);box-shadow:0 1px 0 var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;padding-block:18px}
   .brand{display:flex;flex-direction:column;line-height:1.1}
